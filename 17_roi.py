@@ -1,0 +1,1 @@
+# ROI(Region of Interest): 관심 영역
