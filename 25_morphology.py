@@ -22,8 +22,9 @@ import numpy as np
 #팽창 후 침식: 구멍이 메움
 
 img = cv2.imread('./images/circuit.bmp', cv2.IMREAD_GRAYSCALE)
-# gse = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
-# gse = cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5))
+# MORPH_RECT: 사각형, MORPH_ELLIPSE: 타원, MORPH_CROSS: 십자
+#gse = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
+#gse = cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5))
 gse = cv2.getStructuringElement(cv2.MORPH_RECT, (7, 3))
 dst1 = cv2.dilate(img, gse)
 dst2 = cv2.erode(img, gse)
